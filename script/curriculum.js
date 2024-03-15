@@ -26,7 +26,11 @@ llab.secondarySetUp = function() {
     course = params.course || '';
 
     // FIXME -- not sure this really belongs here as well.
-    llab.addFeedback(document.title, llab.file, course);
+    // ABRANTES: desabilitei, na linha abaixo, aquela caixa
+    // de feedback de uma empresa terceirizada que cobra
+    // por esse serviço e nem é digna o suficiente de colcor
+    // os preços em seu site.
+    //llab.addFeedback(document.title, llab.file, course);
 
     // fix snap links so they run snap
     $('a.run').each(function(i) {
