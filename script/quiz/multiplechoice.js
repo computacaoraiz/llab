@@ -89,15 +89,15 @@ MC.prototype.displayNumberAttempts = function(part1, part2, states) {
     var nextAttemptString = "";
     // TODO: Make this switch / case and refactor to a function (for clarity)
     if (Math.floor(nextAttemptNum / 10) == 1) {
-        nextAttemptString = nextAttemptNum + "th";
+        nextAttemptString = nextAttemptNum + "ª";
     } else if (nextAttemptNum % 10 == 1) {
-        nextAttemptString = nextAttemptNum + "st";
+        nextAttemptString = nextAttemptNum + "ª";
     } else if (nextAttemptNum % 10 == 2) {
-        nextAttemptString = nextAttemptNum + "nd";
+        nextAttemptString = nextAttemptNum + "ª";
     } else if (nextAttemptNum % 10 == 3) {
-        nextAttemptString = nextAttemptNum + "rd";
+        nextAttemptString = nextAttemptNum + "ª";
     } else {
-        nextAttemptString = nextAttemptNum + "th";
+        nextAttemptString = nextAttemptNum + "ª";
     }
     this.multipleChoice.find('.numberAttemptsDiv').html(part1 + " " + nextAttemptString + " " + part2 + ".");
 };
@@ -122,7 +122,7 @@ MC.prototype.render = function() {
         //$('.MultipleChoice').html(pageTemplate);
 
         /* set the question type title */
-        this.multipleChoice.find('.questionType').html('Question ' + (this.num + 1));
+        this.multipleChoice.find('.questionType').html('Questão ' + (this.num + 1));
     }
 
     /* render the prompt */
@@ -194,7 +194,7 @@ MC.prototype.render = function() {
         this.multipleChoice.find(".checkAnswerButton").innerHTML = "Save Answer";
         this.multipleChoice.find(".tryAgainButton").innerHTML = "Edit Answer";
     } else {
-        this.displayNumberAttempts("This is your", "attempt", this.attempts);
+        this.displayNumberAttempts("Esta é sua", "tentativa", this.attempts);
     };
 
     if (this.states.length > 0) {
@@ -393,12 +393,12 @@ MC.prototype.enforceMaxChoices = function(inputs) {
         if (countChecked > maxChoices) {
             //this.node.view.notificationManager.notify('You have selected too many. Please select only ' + maxChoices + ' choices.',3);
             //maxChoices = 3;
-            alert('You have selected too many. Please select only ' + maxChoices + ' choices.');
+            alert('Você selecionou muitas alternativas. Escolha apenas uma ' + maxChoices + ' alternativa.');
             return false;
         } else if (countChecked < maxChoices) {
             //this.node.view.notificationManager.notify('You have not selected enough. Please select ' + maxChoices + ' choices.',3);
             //maxChoices = 3;
-            alert('You have not selected enough. Please select ' + maxChoices + ' choices.');
+            alert('Você não selecionou alternativas suficientes. Escolha ' + maxChoices + ' alternativas.');
             return false;
         }
     }
@@ -418,7 +418,7 @@ MC.prototype.getResultMessage = function(isCorrect) {
 
     /* if this attempt is correct, then we only need to return a msg */
     if (isCorrect) {
-        message = "You have successfully completed this question!";
+        message = "Você concluiu com sucesso essa questão!";
     }
 
     return message;
@@ -506,10 +506,10 @@ MC.prototype.getTemplate = function() {
         "				<table class='buttonTable'>" +
         "					<tr>" +
         "						<td><div class='buttonDiv'>" +
-        "							<button class='checkAnswerButton btn btn-primary'>Check Answer</button>" +
+        "							<button class='checkAnswerButton btn btn-primary'>Verificar Resposta</button>" +
         "						</div></td><td>" +
         "						<div class='buttonDiv'>" +
-        "							<button class='tryAgainButton btn btn-primary'>Try Again</button>" +
+        "							<button class='tryAgainButton btn btn-primary'>Tentar Novamente</button>" +
         "						</div></td>" +
         "					</tr>" +
         "				</table>" +
