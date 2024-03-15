@@ -86,6 +86,12 @@ llab.paths.scripts[1].push("script/course.js");
 llab.paths.scripts[1].push("script/topic.js");
 // llab.paths.scripts[1].push("script/lib/sha1.js");     // for brainstorm
 
+// A configuração abaixo carrega as alterações locais do LLAB. Tive
+// que fazer isso pois apenas salvar o arquivo llab-config.js no
+// diretório /bjc-r/ conforme a documentação estava indicando,
+// não carregava o script personalizado.
+llab.paths.scripts[1].push("../llab-config.js");
+
 // Doing a very weird thing delaying this until stage 1
 // try to get the above files loaded faster, they only depend on jQuery.
 llab.paths.stage_complete_functions[1] = function() {

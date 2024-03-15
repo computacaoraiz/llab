@@ -231,18 +231,21 @@ code { /* Override bootstrap. */
 /* Overrides default bootstrap which conflicts with right float dropdown. */
 .btn-group > .btn {
   float: none;
+  width: 75px;
 }
 
 /* Bottom nav buttons are slightly different */
 .bottom-nav {
   float: right;
   height: 26px;
+  width: 135px;
   margin-top: -13px; /* Height / 2 */
   vertical-align: middle;
 }
 
 .bottom-nav > .btn {
   height: 26px; /* Same height as above */
+  width: 65px;
   padding: 2px; /* FIXME -- value is weird */
   font-size: .76em;
 }
