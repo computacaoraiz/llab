@@ -44,6 +44,8 @@ llab.CORSCompliantServers.push("inst.eecs.berkeley.edu");
 llab.CORSCompliantServers.push("cs10.berkeley.edu");
 llab.CORSCompliantServers.push("beautyjoy.github.io");
 llab.CORSCompliantServers.push("cs10.github.io");
+llab.CORSCompliantServers.push("www.computacaoraiz.com.br");
+llab.CORSCompliantServers.push("computacaoraiz.com.br");
 llab.CORSCompliantServers.push("localhost");
 llab.CORSCompliantServers.push("0.0.0.0");
 
